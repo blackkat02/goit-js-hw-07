@@ -20,13 +20,6 @@ class StringBuilder {
     padBoth(str) {
         this.#value = this.#value + str + this.#value;
     }
-
-    // removeItem(itemToRemove) {
-    //   const indexItemToRemove = this.#items.indexOf(itemToRemove);
-    //   if (indexItemToRemove !== -1) {
-    //     this.#items.splice(indexItemToRemove, 1);
-    //   }
-    // }
 }
 
 const builder = new StringBuilder(".");
