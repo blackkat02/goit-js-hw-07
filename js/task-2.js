@@ -24,3 +24,77 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+// const list = document.querySelector(".gallery");
+
+// // const newTechnologies = ["React", "TypeScript", "Node.js"];
+// const markup = images
+//   .map((image) => `<li class="list-item new">${image.url}</li>`)
+//   .join("");
+
+// list.insertAdjacentHTML("beforeend", markup);
+// list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
+
+
+// const createGalleryItem = (item) => `<li class="gallery-item">
+//   <a href="#">
+//     <img src="${item.url}" alt="${item.alt}" width="${item.width}" height="${item.height}">
+//   </a>
+// </li>`;
+
+// const pictures = [
+//   {
+//     width: 700,
+//     height: 460,
+//     url: "https://picsum.photos/id/0/700/460",
+//     alt: "laptop",
+//   },
+//   {
+//     width: 700,
+//     height: 460,
+//     url: "https://picsum.photos/id/1/700/460",
+//     alt: "developer",
+//   },
+//   {
+//     width: 700,
+//     height: 460,
+//     url: "https://picsum.photos/id/10/700/460",
+//     alt: "forest",
+//   },
+//   {
+//     width: 700,
+//     height: 460,
+//     url: "https://picsum.photos/id/100/700/460",
+//     alt: "beach",
+//   },
+//   {
+//     width: 700,
+//     height: 460,
+//     url: "https://picsum.photos/id/1000/700/460",
+//     alt: "mountain",
+//   },
+// ];
+
+/*
+<li class="gallery-item">
+  <a href="#">
+    <img src="" alt="" width="" height="">
+  </a>
+</li>
+*/
+
+const createGalleryItem = (item) => `<li class="gallery-item">
+  <a href="#">
+    <img src="${item.url}" alt="${item.alt}" width="${item.width}" height="${item.height}">
+  </a>
+</li>`;
+
+const galleryMarkup = images.map(createGalleryItem).join("");
+
+console.log(galleryMarkup);
+
+const galleryEl = document.querySelector(".gallery");
+
+// galleryEl.innerHTML = galleryMarkup; //? використовуємо тоді, коли треба замінити попередній контент на новий
+
+galleryEl.insertAdjacentHTML("beforeend", galleryMarkup);
