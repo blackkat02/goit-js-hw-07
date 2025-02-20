@@ -27,7 +27,9 @@ const images = [
 
 // Формуємо розмітку
 const galleryMarkup = images
-  .map(({ url, alt }) => `<li class="gallery-item"><img src="${url}" alt="${alt}"></li>`)
+  .map(({ url, alt }) => `<li class="gallery-item">
+  <img src="${url}" alt="${alt}">
+  </li>`)
   .join("");
 
 // Отримуємо список галереї
