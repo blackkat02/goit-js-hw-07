@@ -4,13 +4,14 @@
 
 body {
   margin: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 
 button {
@@ -19,17 +20,9 @@ button {
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
   letter-spacing: 0.04em;
-  /* margin-top: 8px;
-  width: 86px;
-  height: 40px; */
   border-radius: 8px;
-  /* gap: 10px; */
-  padding-top: 8px;
-  padding-right: 16px;
-  padding-bottom: 8px;
-  padding-left: 16px;
+  padding: 8px 16px;
   border: transparent;
 }
 
@@ -44,7 +37,6 @@ button {
 }
 
 .item {
-  font-family: Montserrat, sans-serif;
   color: #2E2F42;
   background: #F6F6FE;
   padding: 16px;
@@ -58,7 +50,6 @@ button {
   font-weight: 600;
   font-size: 24px;
   line-height: 1.33;
-  letter-spacing: 0.04em;
   margin: 0 0 16px 0;
 }
 
@@ -72,12 +63,10 @@ button {
   max-height: 40px;
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 0.04em;
   border-radius: 4px;
   border: 1px solid #808080;
   padding: 8px 0 8px 16px;
   margin-bottom: 16px;
-
 }
 
 .item li:not(:last-child) {
@@ -112,7 +101,6 @@ button {
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.04em;
   margin: 24px 24px 16px 24px;
   border-radius: 4px;
@@ -120,7 +108,6 @@ button {
 }
 
 h1 {
-  font-family: Montserrat, sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.33;
@@ -140,7 +127,6 @@ h1 {
   border-radius: 8px;
   padding: 24px 24px 80px 24px;
   gap: 16px;
-
 }
 
 .login-form label {
@@ -149,30 +135,43 @@ h1 {
   gap: 8px;
   width: 360px;
   height: 72px;
-  /* margin-bottom: 8px; */
+  color: #2E2F42;
 }
 
 .login-form input {
   width: 360px;
   height: 72px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+input[name="email"]:hover {
+  border: 1px solid #000000;
+}
+
+input[name="email"]:active {
+  border: 1px solid #808080;
+}
+
+input[name="email"]:active + label {
+  color: #2E2F42;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .login-form button {
-  /* background: #4E75FF;
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.04em; */
   margin-top: 8px; 
   width: 86px;
   height: 40px;
-  /* border-radius: 8px;
-  padding-top: 8px;
-  padding-right: 16px;
-  padding-bottom: 8px;
-  padding-left: 16px;
-  border: transparent; */
+}
+
+.login-form button:hover,
+.login-form button:active {
+  background: #6C8CFF;
 }
 /* #endregion */
 
@@ -182,54 +181,50 @@ h1 {
   width: 345px;
   height: 280px;
   border-radius: 8px;
-  /* gap: 10px; */
-  padding-top: 100px;
-  padding-right: 88px;
-  padding-bottom: 100px;
-  padding-left: 88px;
+  padding: 100px 88px;
 }
 
 .color {
-  font-family: Montserrat;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-
 }
-
 /* #endregion */
 
 /* #region task-6 */
 #controls {
   background: #F6F6FE;
-
   display: flex;
   width: 486px;
   height: 104px;
-
   border-radius: 8px;
   padding: 32px;
   gap: 16px;
 }
 
 #controls input {
+  font-family: Montserrat, sans-serif;
   color: #2E2F42;
-  font-family: Montserrat;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.04em;
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 16px;
+}
 
+button[data-destroy] {
+  background: #FF4E4E;
+}
 
+button[data-destroy]:hover,
+button[data-destroy]:active {
+  background: #FF7070;
 }
 
 #boxes {
   display: flex;
   justify-content: flex-start;
   gap: 44px;
+  row-gap: 44px;
   flex-wrap: wrap;
 }
-
-
 /* #endregion */
