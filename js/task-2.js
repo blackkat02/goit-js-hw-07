@@ -37,3 +37,5 @@ const galleryEl = document.querySelector(".gallery");
 
 // Додаємо всі елементи в DOM за одну операцію
 galleryEl.insertAdjacentHTML("beforeend", galleryMarkup);
+
+console.log(galleryEl)

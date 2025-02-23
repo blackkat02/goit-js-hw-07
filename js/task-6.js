@@ -6,43 +6,44 @@ const refs = {
 };
 
 refs.create.addEventListener("click", handleClick);
-refs.destroy.addEventListener("click", destroyBoxes); // Add event for destroy button
+refs.destroy.addEventListener("click", destroyBoxes);
 
 function handleClick() {
   const amount = Number(refs.controls.value.trim());
 
   if (amount < 1 || amount > 100 || isNaN(amount)) {
     alert("Enter a number from 1 to 100 please!");
-    refs.controls.value = ""; 
+    refs.controls.value = "";
     return;
   }
 
   createBoxes(amount);
-  refs.controls.value = ""; 
+  refs.controls.value = "";
 }
 
 function createBoxes(amount) {
-  refs.container.innerHTML = "";
+  refs.container.replaceChildren(); // Очищення контейнера
   let size = 30;
+  const fragment = document.createDocumentFragment(); // Використовуємо фрагмент
 
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement("div");
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
-    box.classList.add("box"); 
+    box.classList.add("box");
 
-    refs.container.appendChild(box);
-    size += 10; 
+    fragment.appendChild(box); // Додаємо в фрагмент
+    size += 10;
   }
+
+  refs.container.appendChild(fragment); // Додаємо все разом в DOM
 }
 
-// Function to remove all boxes
 function destroyBoxes() {
-  refs.container.innerHTML = "";
+  refs.container.replaceChildren();
 }
 
-// Function to generate random colors
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
